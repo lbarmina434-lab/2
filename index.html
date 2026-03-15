@@ -1,196 +1,364 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PharmaLearn — образовательный сайт о фармации</title>
+
+<title>ФармаПродажи PRO — обучение фармацевтов</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
 body{
-background:#f4f7fb;
-color:#333;
-line-height:1.6;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f5fff9;
+color:#1d3f2f;
 }
 
 header{
-background:#1e88e5;
+background:#1b8f5a;
 color:white;
 padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.hero{
-background:linear-gradient(120deg,#42a5f5,#1e88e5);
-color:white;
-padding:80px 20px;
 text-align:center;
 }
 
+.hero{
+background-image:url("https://images.unsplash.com/photo-1585435557343-3b092031a831");
+background-size:cover;
+background-position:center;
+padding:140px 20px;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:46px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.hero button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+background:white;
+color:#1b8f5a;
+border-radius:8px;
+cursor:pointer;
+margin-top:20px;
+}
+
 section{
-padding:60px 20px;
 max-width:1100px;
 margin:auto;
+padding:60px 20px;
 }
 
 h2{
-margin-bottom:20px;
-color:#1e88e5;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+color:#1b8f5a;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+margin-top:20px;
 }
 
-.quiz{
+.photo{
+width:100%;
+border-radius:12px;
+margin-top:20px;
+}
+
+.scenario{
 background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-max-width:500px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+margin-top:20px;
 }
 
-button{
-padding:10px 20px;
-border:none;
-background:#1e88e5;
-color:white;
-border-radius:5px;
-cursor:pointer;
+button.answer{
+width:100%;
+padding:12px;
 margin-top:10px;
+border:none;
+background:#1b8f5a;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 
-button:hover{
-background:#1565c0;
+button.answer:hover{
+background:#146a44;
+}
+
+.reward{
+color:green;
+font-weight:bold;
+}
+
+.punish{
+color:red;
+font-weight:bold;
+}
+
+.progress{
+background:#e0e0e0;
+height:22px;
+border-radius:20px;
+margin-top:20px;
+}
+
+.bar{
+background:#1b8f5a;
+height:100%;
+width:0%;
+border-radius:20px;
 }
 
 footer{
+background:#1b8f5a;
+color:white;
 text-align:center;
 padding:30px;
-background:#1e88e5;
-color:white;
-margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>PharmaLearn</h1>
-<nav>
-<a href="#about">О фармации</a>
-<a href="#drugs">Лекарства</a>
-<a href="#quiz">Тест</a>
-</nav>
+
+<h1>ФармаПродажи PRO</h1>
+<p>Обучение техникам продаж для фармацевтов</p>
+
 </header>
 
-<section class="hero">
-<h2>Образовательный сайт по фармации</h2>
-<p>Изучайте лекарства, фармакологию и проверяйте знания с помощью тестов.</p>
-</section>
+<div class="hero">
 
-<section id="about">
-<h2>Что такое фармация</h2>
+<h1>Профессиональная консультация в аптеке</h1>
+
+<p>Освойте психологию продаж и увеличьте доверие клиентов</p>
+
+<button onclick="document.getElementById('training').scrollIntoView({behavior:'smooth'})">
+Начать обучение
+</button>
+
+</div>
+
+<section>
+
+<h2>Почему продажи в аптеке — это экспертная консультация</h2>
+
+<img class="photo" src="https://images.unsplash.com/photo-1580281657527-47a2a6d22b70">
+
 <p>
-Фармация — это наука о лекарствах, их создании, исследовании, хранении и применении.
-Фармацевты изучают химический состав препаратов, их влияние на организм человека
-и способы безопасного применения лекарств.
+
+Фармацевт является медицинским консультантом.  
+Главная задача — **правильно выявить потребность клиента**.
+
+Исследования аптечных сетей показывают:  
+фармацевты, которые задают уточняющие вопросы, увеличивают продажи на **30–40%**.
+
 </p>
-</section>
-
-<section id="drugs">
-<h2>Популярные лекарства</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Парацетамол</h3>
-<p>Жаропонижающее и обезболивающее средство.</p>
-</div>
-
-<div class="card">
-<h3>Ибупрофен</h3>
-<p>Противовоспалительный препарат, снижает боль и температуру.</p>
-</div>
-
-<div class="card">
-<h3>Амоксициллин</h3>
-<p>Антибиотик широкого спектра действия.</p>
-</div>
-
-<div class="card">
-<h3>Аспирин</h3>
-<p>Используется как обезболивающее и противовоспалительное средство.</p>
-</div>
-
-</div>
 
 </section>
 
-<section id="quiz">
+<section>
 
-<h2>Мини тест по фармации</h2>
+<h2>Техника выявления потребности</h2>
 
-<div class="quiz">
+<div class="card">
 
-<p id="question">Какой препарат является антибиотиком?</p>
+<h3>1. Открытый вопрос</h3>
 
-<button onclick="checkAnswer('A')">Парацетамол</button>
-<button onclick="checkAnswer('B')">Амоксициллин</button>
-<button onclick="checkAnswer('C')">Аспирин</button>
+<p>
+"Что вас беспокоит?"  
+"Какие симптомы?"
+</p>
 
-<p id="result"></p>
+<h3>2. Уточнение</h3>
+
+<p>
+
+— когда появились симптомы  
+— есть ли температура  
+— какие препараты уже принимались
+
+</p>
+
+<h3>3. НЛП техника присоединения</h3>
+
+<p>
+
+Повторите ключевые слова клиента.
+
+Клиент:  
+"У меня сильная боль в горле"
+
+Фармацевт:  
+"Понимаю, боль в горле может быть очень неприятной. Давайте подберём эффективное средство."
+
+</p>
+
+<h3>4. Экспертная рекомендация</h3>
+
+<p>
+
+Формула продажи:
+
+1 выявить потребность  
+2 предложить решение  
+3 объяснить преимущества  
+4 предложить дополнительный товар
+
+</p>
 
 </div>
+
+</section>
+
+<section id="training">
+
+<h2>Тренажер фармацевта</h2>
+
+<div id="tasks"></div>
+
+<h3>Ваш прогресс</h3>
+
+<div class="progress">
+<div class="bar" id="bar"></div>
+</div>
+
+<p id="score">Баллы: 0</p>
 
 </section>
 
 <footer>
-<p>© 2026 PharmaLearn — образовательный сайт по фармации</p>
+
+<p>Платформа обучения фармацевтов</p>
+
 </footer>
 
 <script>
 
-function checkAnswer(answer){
+let score=0;
 
-const result=document.getElementById("result");
+const tasks=[
 
-if(answer==="B"){
-result.innerHTML="✅ Верно! Амоксициллин — это антибиотик.";
-result.style.color="green";
+{q:"Клиент просит средство от простуды.",a:["Продать популярный препарат","Уточнить симптомы","Сказать обратиться к врачу"],c:1},
+{q:"Клиент покупает обезболивающее.",a:["Продать препарат","Рекомендовать защиту желудка","Игнорировать"],c:1},
+{q:"Клиент ищет дешевый препарат.",a:["Показать дешевый","Объяснить разницу","Отказать"],c:1},
+{q:"Клиент сомневается.",a:["Игнорировать","Выяснить причину сомнений","Продолжать продавать"],c:1},
+{q:"Клиент покупает антибиотик.",a:["Продать","Уточнить назначение врача","Игнорировать"],c:1},
+{q:"Клиент жалуется на кашель.",a:["Продать сироп","Уточнить тип кашля","Игнорировать"],c:1},
+{q:"Клиент просит витамины.",a:["Продать любые","Уточнить цель","Игнорировать"],c:1},
+{q:"Клиент жалуется на насморк.",a:["Продать капли","Уточнить симптомы","Игнорировать"],c:1},
+{q:"Клиент ищет средство от аллергии.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1},
+{q:"Клиент покупает жаропонижающее.",a:["Продать","Уточнить температуру","Игнорировать"],c:1},
+
+{q:"Клиент покупает антибиотик.",a:["Продать","Спросить рецепт врача","Игнорировать"],c:1},
+{q:"Клиент просит дешевый аналог.",a:["Продать дешевый","Объяснить разницу","Отказать"],c:1},
+{q:"Клиент покупает обезболивающее.",a:["Продать","Рекомендовать защиту желудка","Игнорировать"],c:1},
+{q:"Клиент жалуется на боль в горле.",a:["Продать леденцы","Уточнить симптомы","Игнорировать"],c:1},
+{q:"Клиент покупает сироп.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1},
+
+{q:"Клиент просит средство от температуры.",a:["Продать","Уточнить температуру","Игнорировать"],c:1},
+{q:"Клиент покупает витамин D.",a:["Продать","Уточнить цель приема","Игнорировать"],c:1},
+{q:"Клиент просит средство от боли.",a:["Продать","Уточнить тип боли","Игнорировать"],c:1},
+{q:"Клиент сомневается в препарате.",a:["Игнорировать","Объяснить преимущества","Продолжать продавать"],c:1},
+{q:"Клиент покупает капли.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1},
+
+{q:"Клиент покупает антибиотик.",a:["Продать","Уточнить назначение врача","Игнорировать"],c:1},
+{q:"Клиент просит витамины.",a:["Продать","Уточнить цель приема","Игнорировать"],c:1},
+{q:"Клиент покупает обезболивающее.",a:["Продать","Рекомендовать защиту желудка","Игнорировать"],c:1},
+{q:"Клиент жалуется на кашель.",a:["Продать","Уточнить тип кашля","Игнорировать"],c:1},
+{q:"Клиент спрашивает дешевый аналог.",a:["Продать дешевый","Объяснить разницу","Игнорировать"],c:1},
+
+{q:"Клиент покупает сироп.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1},
+{q:"Клиент жалуется на аллергию.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1},
+{q:"Клиент покупает антибиотик.",a:["Продать","Уточнить назначение врача","Игнорировать"],c:1},
+{q:"Клиент покупает витамины.",a:["Продать","Уточнить цель приема","Игнорировать"],c:1},
+{q:"Клиент сомневается.",a:["Игнорировать","Выяснить причину","Продолжать продавать"],c:1},
+
+{q:"Клиент просит средство от кашля.",a:["Продать","Уточнить тип кашля","Игнорировать"],c:1},
+{q:"Клиент покупает обезболивающее.",a:["Продать","Рекомендовать защиту желудка","Игнорировать"],c:1},
+{q:"Клиент спрашивает аналог.",a:["Отказать","Объяснить разницу","Игнорировать"],c:1},
+{q:"Клиент жалуется на температуру.",a:["Продать","Уточнить температуру","Игнорировать"],c:1},
+{q:"Клиент покупает витамин С.",a:["Продать","Уточнить цель приема","Игнорировать"],c:1},
+
+{q:"Клиент просит средство от простуды.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1},
+{q:"Клиент покупает антибиотик.",a:["Продать","Уточнить назначение врача","Игнорировать"],c:1},
+{q:"Клиент жалуется на боль.",a:["Продать","Уточнить тип боли","Игнорировать"],c:1},
+{q:"Клиент сомневается.",a:["Игнорировать","Объяснить преимущества","Продолжать продавать"],c:1},
+{q:"Клиент покупает сироп.",a:["Продать","Уточнить симптомы","Игнорировать"],c:1}
+
+];
+
+function render(){
+
+let container=document.getElementById("tasks");
+
+tasks.forEach((t,i)=>{
+
+let div=document.createElement("div");
+div.className="scenario";
+
+let html="<b>Ситуация "+(i+1)+"</b><p>"+t.q+"</p>";
+
+t.a.forEach((ans,index)=>{
+html+=`<button class="answer" onclick="check(${i},${index})">${ans}</button>`;
+});
+
+html+=`<p id="r${i}"></p>`;
+
+div.innerHTML=html;
+container.appendChild(div);
+
+});
+
+}
+
+function check(i,a){
+
+let r=document.getElementById("r"+i);
+
+if(a===tasks[i].c){
+
+r.innerHTML="✔ Отлично! Вы действуете как профессиональный фармацевт.";
+r.className="reward";
+score++;
+
 }else{
-result.innerHTML="❌ Неверно. Попробуйте снова.";
-result.style.color="red";
-}
+
+r.innerHTML="✖ Ошибка. Необходимо выявить потребность клиента.";
+r.className="punish";
 
 }
+
+update();
+
+}
+
+function update(){
+
+document.getElementById("score").innerText="Баллы: "+score;
+
+let percent=(score/tasks.length)*100;
+
+document.getElementById("bar").style.width=percent+"%";
+
+}
+
+render();
 
 </script>
 
