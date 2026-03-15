@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmaLearn — образовательный сайт о фармации</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:#1e88e5;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+background:linear-gradient(120deg,#42a5f5,#1e88e5);
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+margin-bottom:20px;
+color:#1e88e5;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.quiz{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+max-width:500px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+background:#1e88e5;
+color:white;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#1565c0;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#1e88e5;
+color:white;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>PharmaLearn</h1>
+<nav>
+<a href="#about">О фармации</a>
+<a href="#drugs">Лекарства</a>
+<a href="#quiz">Тест</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Образовательный сайт по фармации</h2>
+<p>Изучайте лекарства, фармакологию и проверяйте знания с помощью тестов.</p>
+</section>
+
+<section id="about">
+<h2>Что такое фармация</h2>
+<p>
+Фармация — это наука о лекарствах, их создании, исследовании, хранении и применении.
+Фармацевты изучают химический состав препаратов, их влияние на организм человека
+и способы безопасного применения лекарств.
+</p>
+</section>
+
+<section id="drugs">
+<h2>Популярные лекарства</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Парацетамол</h3>
+<p>Жаропонижающее и обезболивающее средство.</p>
+</div>
+
+<div class="card">
+<h3>Ибупрофен</h3>
+<p>Противовоспалительный препарат, снижает боль и температуру.</p>
+</div>
+
+<div class="card">
+<h3>Амоксициллин</h3>
+<p>Антибиотик широкого спектра действия.</p>
+</div>
+
+<div class="card">
+<h3>Аспирин</h3>
+<p>Используется как обезболивающее и противовоспалительное средство.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="quiz">
+
+<h2>Мини тест по фармации</h2>
+
+<div class="quiz">
+
+<p id="question">Какой препарат является антибиотиком?</p>
+
+<button onclick="checkAnswer('A')">Парацетамол</button>
+<button onclick="checkAnswer('B')">Амоксициллин</button>
+<button onclick="checkAnswer('C')">Аспирин</button>
+
+<p id="result"></p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 PharmaLearn — образовательный сайт по фармации</p>
+</footer>
+
+<script>
+
+function checkAnswer(answer){
+
+const result=document.getElementById("result");
+
+if(answer==="B"){
+result.innerHTML="✅ Верно! Амоксициллин — это антибиотик.";
+result.style.color="green";
+}else{
+result.innerHTML="❌ Неверно. Попробуйте снова.";
+result.style.color="red";
+}
+
+}
+
+</script>
+
+</body>
+</html>
